@@ -1,101 +1,70 @@
-# HostelFinder
+# Hostel Finder 🏨
 
-HostelFinder is an Android app that helps students discover and book student accommodation, while giving hostel owners tools to manage listings and booking requests.
+**"Find Your Perfect Hostel Near Campus"**
 
-## Features
+A complete native Android application developed for **Android Studio** using **Java**, **XML layouts**, **Material Design**, and **Firebase**.
 
-### For students
-- Create an account, sign in, and recover a password.
-- Browse and search hostels by district, area, and nearby university.
-- Sort listings by price, rating, and availability.
-- View hostel details and submit a booking request.
-- Save hostels, view bookings, and access messages, reviews, and notifications.
+---
 
-### For hostel owners
-- Register and access an owner dashboard.
-- Add and manage hostel listings.
-- Review booking requests.
-- Access owner messages, notifications, profile, settings, and analytics screens.
+## 📱 Tech Stack & Configuration
 
-## Technology
+- **IDE:** Android Studio (Koala / Ladybug / Iguana / Hedgehog)
+- **Language:** Java (JDK 21 compatible, Java 17 bytecode)
+- **UI:** XML Layouts with Material Design Components
+- **Architecture:** Activities, RecyclerView Adapters, Data Models
+- **Backend:** Firebase Authentication & Cloud Services
+- **Build System:**
+  - **Gradle:** 8.7
+  - **Android Gradle Plugin (AGP):** 8.4.1
+  - **Compile SDK:** 34
+  - **Target SDK:** 34
+  - **Min SDK:** 24 (Android 7.0+)
 
-- Native Android application
-- Java and Kotlin
-- Android Gradle Plugin with Kotlin Gradle DSL
-- AndroidX, Material Components, and ConstraintLayout
-- Firebase Authentication
-- Google Credential Manager and Google ID sign-in libraries
+---
 
-## Requirements
+## 🚀 How to Run in Android Studio
 
-- Android Studio with Android SDK Platform 37 installed
-- JDK 11 or a compatible JDK supported by the installed Android Gradle Plugin
-- A Firebase project configured for the app
-
-The application ID is `com.example.hostelfinder` and the minimum Android version is API 24 (Android 7.0).
-
-## Setup
-
-1. Clone the repository:
-
+1. **Clone or Download the ZIP**:
    ```bash
-   git clone https://github.com/ssemwangaerick01-png/hostelfind.git
-   cd hostelfind
+   git clone https://github.com/ssemwangaerick01-png/hostile.git
    ```
+   Or click **Code → Download ZIP** and extract it.
 
-2. Open the project in Android Studio and allow Gradle to sync.
+2. **Open in Android Studio**:
+   - Launch Android Studio.
+   - Choose **File → Open** (or **Open** from the welcome screen).
+   - Select the root folder of this project.
 
-3. Configure Firebase for the Android application:
-   - Create or select a Firebase project.
-   - Add an Android app with package name `com.example.hostelfinder`.
-   - Enable the authentication providers used by your configuration.
-   - Download `google-services.json` and place it in the `app/` directory.
+3. **Firebase Setup (`google-services.json`)**:
+   - A placeholder `app/google-services.json` is included so Gradle sync succeeds immediately.
+   - To connect your live Firebase project (`hotil01`), download your `google-services.json` from the [Firebase Console](https://console.firebase.google.com/project/hotil01/settings/general) and place it in the `app/` directory (replacing the placeholder).
+   - Ensure **Email/Password** sign-in provider is enabled under **Authentication → Sign-in method**.
 
-   Do not commit private credentials or production configuration files to a public repository.
+4. **Sync & Run**:
+   - Click **Sync Project with Gradle Files** (elephant icon).
+   - Select an Android Virtual Device (Emulator with API 30+ recommended).
+   - Click **Run app** (green play button ▶️).
 
-4. Select an emulator or connect an Android device, then run the `app` configuration from Android Studio.
+---
 
-## Build from the command line
+## 👥 Features
 
-On macOS or Linux:
+### 🎓 Student Flow:
+- **Splash & Onboarding:** Welcoming intro screens
+- **Authentication:** Email & Password login, registration, password reset
+- **Dashboard:** Browse hostels, view featured listings, campus filtering
+- **Search & Filter:** Search by location, amenities, price, university
+- **Hostel Details:** View hostel photos, pricing, amenities, room details, and owner contact
+- **Bookings:** Book a room, view active and previous bookings
+- **Saved Hostels:** Bookmark favorite listings
+- **Messages & Notifications:** In-app messaging and alerts
+- **Reviews:** Submit and read reviews
+- **Profile:** Manage student profile details
 
-```bash
-./gradlew assembleDebug
-```
-
-On Windows:
-
-```bat
-gradlew.bat assembleDebug
-```
-
-The debug APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
-
-## Project structure
-
-```
-app/
-  src/main/
-    java/com/example/hostelfinder/  # Android activities and app logic
-    res/                            # Layouts, drawables, and other resources
-    AndroidManifest.xml
-gradle/
-  libs.versions.toml                # Dependency versions
-build.gradle.kts
-settings.gradle.kts
-```
-
-## Current implementation notes
-
-This repository is an early-stage app. Some screens use sample hostel data or temporary in-memory interactions; booking submission and other flows may not yet persist data to a backend. Firebase Authentication is included as a dependency, but a valid local Firebase configuration is required to build and use Firebase-backed features.
-
-## Contributing
-
-1. Fork the repository.
-2. Create a branch for your change.
-3. Make and verify your changes in Android Studio.
-4. Open a pull request with a clear description.
-
-## License
-
-No license file is currently included. Contact the repository owner before redistributing or reusing this project.
+### 🏢 Hostel Owner Flow:
+- **Owner Dashboard:** Overview of listed properties and pending bookings
+- **Add Hostel:** Step-by-step listing wizard with details, amenities, and room pricing
+- **Manage Listings:** Edit, update, and manage hostel listings
+- **Booking Requests:** Accept or reject incoming student booking requests
+- **Owner Messages & Notifications:** Communicate with prospective students
+- **Analytics & Profile:** View occupancy, analytics, and business profile
